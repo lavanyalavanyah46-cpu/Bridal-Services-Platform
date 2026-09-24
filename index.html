@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bridal Services Platform</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="logo">Bridal<span>Bloom</span></div>
+<nav><a href="#home">Home</a><a href="#services">Services</a><a href="#artists">Artists</a><a href="#gallery">Gallery</a><a href="#book">Booking</a><button onclick="showLogin()">Login</button></nav></header>
+<section id="home" class="hero"><div><p class="eyebrow">YOUR DREAM WEDDING STARTS HERE</p><h1>Find Your Perfect<br><span>Bridal Services</span></h1><p>Discover trusted makeup artists, mehndi designers, photographers, bridal wear and more.</p><a class="btn" href="#artists">Explore Artists</a></div></section>
+<section id="services"><h2>Our Services</h2><p class="sub">Everything you need for your special day</p><div class="cards">
+<div class="card">💄<h3>Makeup</h3><p>Bridal & party makeup</p></div><div class="card">🌿<h3>Mehndi</h3><p>Traditional & modern designs</p></div><div class="card">📷<h3>Photography</h3><p>Capture every moment</p></div><div class="card">👗<h3>Bridal Wear</h3><p>Beautiful bridal collections</p></div><div class="card">💇<h3>Hair Styling</h3><p>Elegant bridal hairstyles</p></div><div class="card">✨<h3>Skincare</h3><p>Pre-wedding beauty care</p></div>
+</div></section>
+<section id="artists"><h2>Featured Artists</h2><div class="filters"><select id="categoryFilter" onchange="filterArtists()"><option value="all">All Categories</option><option>Makeup</option><option>Mehndi</option><option>Photography</option><option>Bridal Wear</option><option>Hair Styling</option><option>Skincare</option></select><select id="priceFilter" onchange="filterArtists()"><option value="all">All Prices</option><option value="low">Under ₹10,000</option><option value="mid">₹10,000 - ₹20,000</option><option value="high">Above ₹20,000</option></select><select id="ratingFilter" onchange="filterArtists()"><option value="all">All Ratings</option><option value="4">4+ ⭐</option><option value="4.5">4.5+ ⭐</option></select><input id="locationFilter" oninput="filterArtists()" placeholder="Search location"></div><div id="artistGrid" class="artist-grid"></div></section>
+<section id="gallery"><h2>Bridal Inspiration Gallery</h2><div class="gallery"><div>👰<span>Bridal Makeup</span></div><div>🌸<span>Mehndi</span></div><div>📸<span>Wedding Moments</span></div><div>💐<span>Bridal Style</span></div></div></section>
+<section id="book"><h2>Book an Appointment</h2><form id="bookingForm" onsubmit="bookService(event)"><input id="name" required placeholder="Your Name"><input id="email" type="email" required placeholder="Email"><select id="service" required><option value="">Select Service</option><option>Makeup</option><option>Mehndi</option><option>Photography</option><option>Bridal Wear</option><option>Hair Styling</option><option>Skincare</option></select><input id="date" type="date" required><input id="time" type="time" required><select id="package"><option>Basic Package</option><option>Premium Package</option><option>Luxury Package</option></select><button class="btn">Book Appointment</button></form><p id="bookingMsg"></p></section>
+<footer><p>© 2026 BridalBloom — Bridal Services Platform</p></footer>
+<div id="loginModal" class="modal"><div class="modalbox"><button class="close" onclick="hideLogin()">×</button><h2>Login / Register</h2><input placeholder="Email"><input type="password" placeholder="Password"><button class="btn" onclick="alert('Demo login successful!');hideLogin()">Continue</button></div></div>
+<script src="script.js"></script>
+</body></html>
